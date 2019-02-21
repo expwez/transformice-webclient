@@ -1,0 +1,80 @@
+* {
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #222;
+
+    font-size: 18px;
+    color: black
+}
+
+html {
+	height: 100%;
+}
+
+.page {
+    background: url("./background.jpg") no-repeat top;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+    margin: 0 0 0 0;
+    background: #1e1815;
+    height: 100%;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+td {
+    padding: 2px;
+}
+
+.container {
+    background: #818DB5;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 10px;
+}
+    
+
+input, select {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    height: 38px;
+    padding: 0 30px;
+    background-color: white;
+    border-radius: 4px;
+    border: 0px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+}

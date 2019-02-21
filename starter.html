@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Transformice Runner by expwez/qweqwenoob</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<script type="text/javascript" src="starter.js"></script>
+</head>
+
+<body id="body">
+	<div class="page">
+		<div id="container" class="container">
+			<h1 class="header">Transformice Runner</h1>
+			<table>
+				<tr>
+					<td>
+						Align:
+					</td>
+					<td>
+						<select id="alignSelect">
+							<option value="c" selected>Center</option>
+							<option value="t">Top</option>
+							<option value="l">Left</option>
+							<option value="r">Right</option>
+							<option value="b">Bottom</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Quality:
+					</td>
+					<td>
+						<select id="qualitySelect">
+							<option value="low" title="Favors playback speed over appearance and never uses anti-aliasing.">
+								Low
+							</option>
+							<option value="autolow" title="Emphasizes speed at first but improves appearance whenever possible. Playback begins with anti-aliasing turned off. If Flash Player detects that the processor can handle it, anti-aliasing is turned on.">
+								AutoLow
+							</option>
+							<option value="autohigh" title="Emphasizes playback speed and appearance equally at first but sacrifices appearance for playback speed if necessary. Playback begins with anti-aliasing turned on. If the actual frame rate drops below the specified frame rate, anti-aliasing is turned off to improve playback speed.">
+								AutoHigh
+							</option>
+							<option value="medium" title="Applies some anti-aliasing and does not smooth bitmaps. It produces a better quality than the Low setting, but lower quality than the High setting.">
+								Medium
+							</option>
+							<option value="high" title="Favors appearance over playback speed and always applies anti-aliasing. If the movie does not contain animation, bitmaps are smoothed; if the movie has animation, bitmaps are not smoothed."
+							 selected>
+								High
+							</option>
+							<option value="best" title="Provides the best display quality and does not consider playback speed. All output is anti-aliased and all bitmaps are smoothed.">
+								Best
+							</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Scale:
+					</td>
+					<td>
+						<select id="scaleSelect">
+							<option value="default" title="Makes the entire SWF file visible in the specified area without distortion, while maintaining the original aspect ratio of the movie. Borders can appear on two sides of the movie." selected>
+								Show All
+							</option>
+							<option value="noborder" title="Scales the SWF file to fill the specified area, while maintaining the original aspect ratio of the file. Flash Player can crop the content, but no distortion occurs.">
+								No Border
+							</option>
+							<option value="exactfit" title="Makes the entire SWF file visible in the specified area without trying to preserve the original aspect ratio. Distortion can occur.">
+								Exact Fit
+							</option>
+							<option value="noscale" title="Prevents the SWF file from scaling to fit the area of the OBJECT or EMBED tag. Cropping can occur."
+							 >
+								No Scale
+							</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Window mode:
+					</td>
+					<td>
+						<select id="wmodeSelect">
+							<option value="window" title="The SWF content plays in its own rectangle (''window'') on a web page. The browser determines how the SWF content is layered against other HTML elements. With this value, you cannot explicitly specify if SWF content appears above or below other HTML elements on the page.">
+								Window
+							</option>
+							<option value="direct" title="Use direct to path rendering. This attribute bypasses compositing in the screen buffer and renders the SWF content directly to the screen. This wmode value is recommended to provide the best performance for content playback. It enables hardware accelerated presentation of SWF content that uses Stage Video or Stage 3D.">
+								Direct
+							</option>
+							<option value="opaque" title="The SWF content is layered together with other HTML elements on the page. The SWF file is opaque and hides everything layered behind it on the page.">
+								Opaque
+							</option>
+							<option value="transparent" title="The SWF content is layered together with other HTML elements on the page. The SWF file background color (Stage color) is transparent. HTML elements beneath the SWF file are visible through any transparent areas of the SWF, with alpha blending.">
+								Transparent
+							</option>
+							<option value="gpu" title="Use additional hardware acceleration on some Internet-connected TVs and mobile devices. In contrast to other wmode values, pixel fidelity for display list graphics is not guaranteed.">
+								GPU
+							</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Background color:
+					</td>
+					<td>
+						<input type="text" id="bgcolortInput" value="#6A7495" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button id="runBtn">Run</button>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>
