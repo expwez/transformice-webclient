@@ -1,5 +1,5 @@
 # Transformice Web-Client
-Advanced Transformice web-client is an application which allows you to play Transformice in full screen mode with additional settings such as aligning and scaling
+Advanced Transformice web-client is an application which allows you to play Transformice in full screen mode with additional settings such as aligning and scaling.
 
 # Installation
 ```
