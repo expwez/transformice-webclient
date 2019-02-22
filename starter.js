@@ -40,8 +40,19 @@ function setElementAttributes(element, atts) {
 	}
 }
 
+function loadSettings() {
+	let setts = defaultSettings;
+	for(const key in setts) {
+		if(setts[key] != null) {
+			setts[key] = setts[key].toLowerCase();
+		}
+	}
+	return setts;
+}
+
 
 function run() {
+
 	let alignEl = document.getElementById("alignSelect");
 	let align = alignEl.options[alignEl.selectedIndex].value;
 	setCookie('align', align, 365);
@@ -83,6 +94,8 @@ function run() {
 }
 
 function main() {
+	let settings = loadSettings();
+
 	const cookiesSelects = {
 		'align': 'alignSelect',
 		'quality': 'qualitySelect',
@@ -91,15 +104,13 @@ function main() {
 	}
 
 	for (const cookieName in cookiesSelects) {
-		let cookieValue = getCookie(cookieName);
-
-		if (cookieValue == '') continue;
+		let value = getCookie(cookieName) || settings[cookieName];
 
 		let cookieElement = document.getElementById(cookiesSelects[cookieName])
-		selectItemByValue(cookieElement, cookieValue)
+		selectItemByValue(cookieElement, value)
 	}
 
-	let bgcolor = getCookie('bgcolor')
+	let bgcolor = getCookie('bgcolor') || settings.background
 	if (bgcolor != '')
 		document.getElementById('bgcolortInput').value = bgcolor;
 }
