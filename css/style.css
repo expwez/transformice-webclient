@@ -54,6 +54,8 @@ td {
     text-align: left;
     padding: 10px;
 
+    min-width: 400px;
+
     display: flex;
     flex-direction: column;
 }
