@@ -50,6 +50,46 @@ function loadSettings() {
 	return setts;
 }
 
+function readPointerSettings() {
+	let pointer = document.getElementById("pointerInput").value;
+	setCookie('pointer', pointer, 365);
+
+	let pointerSize = document.getElementById("pointerSizeInput").value;
+	setCookie('pointerSize', pointerSize, 365);
+
+	let pointerOpacity = document.getElementById("pointerOpacityInput").value;
+	setCookie('pointerOpacity', pointerOpacity, 365);
+
+	let pointerHotkey = document.getElementById("pointerHotkeyInput").value;
+	setCookie('pointerHotkey', pointerHotkey, 365);
+
+	
+	if(pointer == "off") {
+		return;
+	}
+
+	dot.style.width = dot.style.height = pointerSize + "px";
+	dot.style.opacity = pointerOpacity / 100;
+
+	let dotVisible = true;
+	dot.style.display = "block";
+
+	document.addEventListener("keydown", function(e) {
+		if(e.keyCode == pointerHotkey) {
+			dotVisible = !dotVisible;
+			dot.style.display = dotVisible ? "block" : "none";
+		}
+	})
+
+	document.addEventListener('mousemove', function(e) {
+		// dot.style.left = e.pageX + "px";
+		// dot.style.top = e.pageY + "px";
+		dot.style.left = (e.pageX - (pointerSize / 2)) + "px";
+		dot.style.top = (e.pageY - (pointerSize / 2)) + "px";
+	});
+}
+
+let dot = document.getElementById("dot");
 
 function run() {
 
@@ -71,6 +111,8 @@ function run() {
 
 	let bgcolor = document.getElementById("bgcolortInput").value;
 	setCookie('bgcolor', bgcolor, 365);
+
+	readPointerSettings();
 
 
 	let embed = document.createElement('embed');
@@ -113,4 +155,8 @@ function main() {
 	let bgcolor = getCookie('bgcolor') || settings.background
 	if (bgcolor != '')
 		document.getElementById('bgcolortInput').value = bgcolor;
+
+
+	dot = document.getElementById("dot");
+
 }

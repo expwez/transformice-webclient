@@ -4,7 +4,7 @@
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
 
-    font-size: 18px;
+    font-size: 16px;
     color: black
 }
 
@@ -39,6 +39,10 @@ input {
     width: 100%;
 }
 
+table {
+    width: 100%;
+}
+
 td {
     padding: 2px;
 }
@@ -49,19 +53,22 @@ td {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
     text-align: left;
     padding: 10px;
+
+    display: flex;
+    flex-direction: column;
 }
     
 
 input, select {
-    height: 38px;
-    padding: 6px 10px;
+    height: 28px;
+    padding: 2px 6px;
     background-color: white;
     border: 1px solid #D1D1D1;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-button {
+.button {
     height: 38px;
     padding: 0 30px;
     background-color: white;
@@ -77,4 +84,20 @@ button {
     text-align: center;
     font-size: 32px;
     font-weight: 300;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    /* border-bottom: 2px solid white; */
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0.1;
+    display: none;
 }
