@@ -2,7 +2,7 @@
 
 var defaultSettings = {
 
-    align: 'c',         // possible values: c / t / l / r / b
+    align: 'b',         // possible values: c / t / l / r / b
     // c means center, t means top, l means left, right means right, b means bottom
 
     quality: 'high',    // possible values: low / medium / high / autolow / autohigh
