@@ -13,7 +13,7 @@ html {
 }
 
 .page {
-    background: url("./background.jpg") no-repeat top;
+    background: url("../img/background.jpg") no-repeat top;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -86,7 +86,6 @@ input, select {
     font-weight: 300;
     margin-top: 4px;
     margin-bottom: 12px;
-    /* border-bottom: 2px solid white; */
 }
 
 .dot {
