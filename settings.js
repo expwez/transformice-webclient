@@ -11,6 +11,8 @@ var defaultSettings = {
 
     wmode: 'window',    // possible values: window / direct / opaque / transparent / gpu
 
+   
+    
     background: '#6A7495'
 
 }
